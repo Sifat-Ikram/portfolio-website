@@ -2,7 +2,6 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import SideDrawer from "@/components/layouts/SideDrawer";
-import CustomCursor from "@/components/ui/CustomCursor";
 import CommandPalette from "@/components/ui/CommandPalette";
 import "./globals.css";
 
@@ -68,7 +67,6 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <SmoothScroll>
-            <CustomCursor />
             <CommandPalette />
             <SideDrawer />
             {children}

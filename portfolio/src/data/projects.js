@@ -1,61 +1,87 @@
-// Screenshots go in: public/images/projects/<name>.png (16:10 looks best).
+
+// Screenshots go in: public/images/projects/<name>.png
 // If an image is missing, a gradient card with the project name is shown.
 // If `live` or `github` is null, that button is hidden.
 
 export const featuredProject = {
     title: "Play House",
-    tagline: "A full-stack toy store with an AI shopping assistant",
+    tagline: "Full-Stack Toy Store with an AI Shopping Assistant",
     description:
-        "An e-commerce platform for toys and games with a smart shopping assistant, flexible product discovery, and separate retail and wholesale buying.",
+        "A full-stack toy e-commerce platform featuring AI-powered product discovery, advanced filtering, persistent carts, secure authentication, checkout, order management, wholesale pricing, and an admin dashboard.",
+
     image: "/images/projects/play-house.png",
+
     features: [
-        "AI shopping assistant",
-        "Shop by category, brand, interest and occasion",
-        "Authentication (login and register)",
-        "Wholesale ordering",
-        "Combo offers and deals",
-        "Responsive, mobile-first UI",
+        "AI shopping assistant with natural-language product discovery",
+        "Advanced search, filtering, sorting, and pagination",
+        "JWT authentication with access and refresh tokens",
+        "Persistent cart, checkout, and order management",
+        "Wholesale pricing, product variants, and combo offers",
+        "Admin dashboard for products, inventory, orders, and reviews",
+        "Responsive UI with animations and reusable components",
     ],
-    tech: ["Next.js", "React"], // TODO: add the rest of your stack (Tailwind, Node.js, MongoDB, ...)
+
+    tech: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "JWT",
+        "OpenRouter AI",
+    ],
+
     live: "https://play-house-phi.vercel.app/",
-    github: null, // TODO: add repo link
+    github: "https://github.com/Sifat-Ikram/play-house",
 };
 
 export const projects = [
     {
-        title: "Spark Gear",
-        description:
-            "Gadgets storefront with search, category browsing and a bold, conversion-focused landing page.",
-        image: "/images/projects/spark-gear.png",
-        tech: ["React", "Tailwind CSS"], // TODO
-        live: null, // TODO
-        github: null, // TODO
-    },
-    {
         title: "ShopSphere",
         description:
-            "Modern e-commerce storefront with featured categories, new arrivals and a clean shopping flow.",
+            "A full-stack e-commerce platform with protected shopping, cart management, bKash and cash-on-delivery payments, user profiles, and an admin dashboard for products, users, and order fulfillment.",
+
         image: "/images/projects/shopsphere.png",
-        tech: ["React", "Tailwind CSS"], // TODO
-        live: null, // TODO
-        github: null, // TODO
+
+        tech: [
+            "Next.js",
+            "React",
+            "JavaScript",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "JWT",
+            "bKash",
+        ],
+
+        live: "https://shop-sphere-client-zeta.vercel.app/",
+        github: "https://github.com/Sifat-Ikram/shop-sphere-client",
     },
+
     {
-        title: "TasteTrail",
+        title: "Spark Gear",
         description:
-            "Restaurant website with menu browsing, promo offers and a warm, appetising visual style.",
-        image: "/images/projects/tastetrail.png",
-        tech: ["React", "Tailwind CSS"], // TODO
-        live: null, // TODO
-        github: null, // TODO
-    },
-    {
-        title: "Linteca",
-        description:
-            "Authentication and onboarding screens with testimonials for a SaaS platform (company work).",
-        image: "/images/projects/linteca.png",
-        tech: ["React", "Tailwind CSS"], // TODO
-        live: null, // TODO
-        github: null,
+            "A full-stack gadgets e-commerce application with product search, filtering, sorting, detailed product pages, cart management, protected checkout, order tracking, and JWT-based authentication.",
+
+        image: "/images/projects/spark-gear.png",
+
+        tech: [
+            "Next.js",
+            "React",
+            "JavaScript",
+            "Tailwind CSS",
+            "React Query",
+            "Framer Motion",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "JWT",
+        ],
+
+        live: "https://spark-gear-six.vercel.app/",
+        github: "https://github.com/Sifat-Ikram/spark-gear-ecommerce",
     },
 ];

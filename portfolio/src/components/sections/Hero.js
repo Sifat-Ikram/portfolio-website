@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { FiArrowRight, FiDownload } from "react-icons/fi";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs, SiMongodb } from "react-icons/si";
 import { profile } from "@/data/profile";
 import { fireConfetti } from "@/lib/confetti";
+import { AiFillOpenAI } from "react-icons/ai";
+import { FaReact, FaNodeJs, FaLayerGroup } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript } from "react-icons/si";
 
 const roles = [
     "Frontend Engineer",
@@ -75,8 +76,10 @@ function HeroVisual() {
     const chips = [
         { label: "React", icon: FaReact, pos: "left-0 top-[10%]", delay: 0 },
         { label: "Next.js", icon: SiNextdotjs, pos: "right-0 top-[20%]", delay: 0.6 },
-        { label: "Node.js", icon: FaNodeJs, pos: "bottom-[14%] left-[3%]", delay: 1.2 },
-        { label: "MongoDB", icon: SiMongodb, pos: "bottom-[7%] right-[5%]", delay: 1.8 },
+        { label: "TypeScript", icon: SiTypescript, pos: "left-0 top-[45%]", delay: 1.2 },
+        { label: "Node.js", icon: FaNodeJs, pos: "right-0 top-[55%]", delay: 1.8 },
+        { label: "AI Agents", icon: AiFillOpenAI, pos: "bottom-[14%] left-[3%]", delay: 2.4 },
+        { label: "Full-stack", icon: FaLayerGroup, pos: "bottom-[7%] right-[5%]", delay: 3.0 },
     ];
 
     return (
@@ -212,9 +215,8 @@ export default function Hero() {
                     <RotatingRole />
 
                     <p className="mt-5 max-w-xl text-base text-muted sm:text-lg">
-                        I build fast, reliable and well-crafted web products with React and
-                        Next.js, and I&apos;m comfortable across the stack with Node.js,
-                        Express and MongoDB.
+                        I’m a Frontend Engineer with 2 years of professional experience building responsive web applications with React and Next.js. Beyond UI development, I build end-to-end features involving API integration, authentication, state management, and backend workflows, with a growing focus on AI-powered applications and agent workflows.
+
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -236,10 +238,6 @@ export default function Hero() {
                         Press
                         <kbd className="rounded-md border-[1.5px] border-border bg-surface px-1.5 py-0.5 font-sans text-xs font-semibold text-text">
                             Ctrl K
-                        </kbd>
-                        or
-                        <kbd className="rounded-md border-[1.5px] border-border bg-surface px-1.5 py-0.5 font-sans text-xs font-semibold text-text">
-                            ⌘ K
                         </kbd>
                         to jump anywhere
                     </button>
