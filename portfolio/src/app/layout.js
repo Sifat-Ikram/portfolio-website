@@ -2,23 +2,23 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import SideDrawer from "@/components/layouts/SideDrawer";
+import CustomCursor from "@/components/ui/CustomCursor";
+import CommandPalette from "@/components/ui/CommandPalette";
 import "./globals.css";
 
-// Headings: clean, professional, slightly friendly
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
   display: "swap",
 });
 
-// Body: highly readable
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
 
-const siteUrl = "https://your-domain.com"; // TODO: replace after deploy
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -44,6 +44,8 @@ export const metadata = {
     url: siteUrl,
     siteName: "MD. Sifat Ikram",
     type: "website",
+    // TODO: add public/og.png (1200x630) and uncomment:
+    // images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
 };
 
@@ -66,6 +68,8 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <SmoothScroll>
+            <CustomCursor />
+            <CommandPalette />
             <SideDrawer />
             {children}
           </SmoothScroll>

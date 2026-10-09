@@ -16,7 +16,6 @@ export const about = {
     // 3 stat cards. A number animates (count-up), a string is shown as it is.
     stats: [
         { value: 2, suffix: "+", label: "Years of professional experience" },
-        { value: 5, suffix: "", label: "Projects built end to end" }, // TODO: set your real number
         { value: "MERN", label: "Full-stack capable" },
     ],
 

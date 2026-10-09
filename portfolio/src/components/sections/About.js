@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FiUser, FiMapPin, FiArrowUpRight } from "react-icons/fi";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CountUp from "@/components/ui/CountUp";
-import { about } from "@/data/about";
+import { about } from "@/data/About";
 import { profile } from "@/data/profile";
 
 // NOTE: colored cards do not use the .bento class on purpose.
@@ -127,8 +127,7 @@ export default function About() {
                                 key={stat.label}
                                 variants={cell}
                                 whileHover={{ y: -4, rotate: i % 2 ? 1 : -1 }}
-                                className={`${card} ${s.box} relative overflow-hidden p-6 sm:p-7 lg:col-span-2 ${i === about.stats.length - 1 ? "md:col-span-2" : ""
-                                    }`}
+                                className={`${card} ${s.box} relative overflow-hidden p-6 sm:p-7 lg:col-span-3`}
                             >
                                 <span
                                     className={`absolute -right-6 -top-6 size-24 rounded-full ${s.blob}`}
