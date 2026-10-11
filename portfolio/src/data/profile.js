@@ -1,14 +1,15 @@
 export const profile = {
     name: "MD. Sifat Ikram",
-    shortName: "Sifat Ikram",
+    shortName: "Sifat",
     initials: "SI",
     role: "Frontend Engineer",
     location: "Dhaka, Bangladesh",
     email: "sifatikram@gmail.com",
+    phone: "+8801718837796",
     resume: "/resume.pdf",
     socials: {
-        github: "https://github.com/your-username", // TODO
-        linkedin: "https://linkedin.com/in/your-username", // TODO
-        facebook: "https://facebook.com/your-username", // TODO
+        github: "https://github.com/Sifat-Ikram",
+        linkedin: "https://www.linkedin.com/in/sifat-ikram-17011713a/",
+        facebook: "https://www.facebook.com/sifat.ikram/",
     },
 };

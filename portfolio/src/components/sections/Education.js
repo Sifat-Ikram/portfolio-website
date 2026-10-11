@@ -14,7 +14,12 @@ export default function Education() {
     return (
         <section id="education" className="section">
             <div className="container-x">
-                <SectionHeading icon={FiBookOpen} label="Education" />
+                <SectionHeading
+                    icon={FiBookOpen}
+                    label="Education"
+                    title="Where I learned"
+                    description="The academic foundation and hands-on training behind my engineering work."
+                />
 
                 <div className="mt-6 grid gap-5 md:grid-cols-2 md:gap-6">
                     {education.map((item, i) => {

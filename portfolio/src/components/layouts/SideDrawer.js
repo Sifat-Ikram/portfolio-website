@@ -129,7 +129,7 @@ export default function SideDrawer() {
                                     style={{ pathLength: progress }}
                                 />
                             </svg>
-                            <span className="absolute inset-[6px] grid place-items-center rounded-full bg-primary text-on-primary shadow-pop">
+                            <span className="absolute inset-[6px] grid place-items-center rounded-full bg-primary text-on-primary">
                                 <FiMenu size={22} />
                             </span>
                             <Tip>Menu</Tip>

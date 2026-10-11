@@ -6,7 +6,7 @@ export const experience = [
         period: "Oct 2025 – Present",
         current: true,
         bullets: [
-            "Own end-to-end frontend development of a Sympro-style web application, building the product from scratch through production-level implementation.",
+            "Own end-to-end frontend development of a service management web application, building it from scratch with React and Next.js through to production-ready implementation.",
             "Translate client requirements into functional user interfaces, communicating directly with clients to understand product needs and shape frontend solutions.",
             "Collaborate with backend developers and contribute UI/UX ideas while independently handling frontend architecture, reusable components, and application-wide implementation.",
         ],
@@ -28,7 +28,7 @@ export const experience = [
         bullets: [
             "Built complete frontend applications from scratch to production-level implementation, independently owning frontend development and UI architecture.",
             "Developed responsive interfaces using React, Next.js, Tailwind CSS, Material UI, and shadcn/ui, and integrated AI agent capabilities into frontend applications.",
-            "Used Lovable AI to accelerate full-stack website development while collaborating with backend developers and translating client requirements and design concepts into functional products.",
+            "Used an AI-assisted workflow to speed up full-stack delivery, reviewing and refactoring generated code to production quality while collaborating with backend developers and translating client requirements into working products.",
         ],
         tech: [
             "React",

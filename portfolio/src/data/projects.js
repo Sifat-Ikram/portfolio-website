@@ -11,14 +11,16 @@ export const featuredProject = {
 
     image: "/images/projects/play-house.png",
 
+    challenge: "Finding the right toy in a large catalog is slow, and one store had to serve both retail and wholesale buyers with different pricing.",
+    solution: "Built an AI assistant that turns natural-language requests into product searches, added advanced filtering and wholesale pricing, and secured the app with JWT access and refresh tokens.",
+    result: "A complete deployed store covering browsing, cart, checkout, order management and an admin dashboard.",
+
     features: [
         "AI shopping assistant with natural-language product discovery",
         "Advanced search, filtering, sorting, and pagination",
         "JWT authentication with access and refresh tokens",
-        "Persistent cart, checkout, and order management",
         "Wholesale pricing, product variants, and combo offers",
         "Admin dashboard for products, inventory, orders, and reviews",
-        "Responsive UI with animations and reusable components",
     ],
 
     tech: [
@@ -45,6 +47,10 @@ export const projects = [
 
         image: "/images/projects/shopsphere.png",
 
+        challenge: "Shoppers needed both online payment (bKash) and cash on delivery, with protected accounts and a way for admins to fulfil orders.",
+        solution: "Built protected shopping flows with JWT, cart and profile management, bKash and cash-on-delivery checkout, and an admin dashboard for products, users and orders.",
+        result: "An end-to-end purchase flow from browsing to fulfilment, deployed and live.",
+
         tech: [
             "Next.js",
             "React",
@@ -67,6 +73,10 @@ export const projects = [
             "A full-stack gadgets e-commerce application with product search, filtering, sorting, detailed product pages, cart management, protected checkout, order tracking, and JWT-based authentication.",
 
         image: "/images/projects/spark-gear.png",
+
+        challenge: "Gadget buyers compare many products, so the catalog needed fast search, filtering and sorting.",
+        solution: "Implemented search, filtering and sorting with React Query for cached data fetching, plus protected checkout and order tracking behind JWT auth.",
+        result: "A complete shopping flow with order tracking, deployed and live.",
 
         tech: [
             "Next.js",

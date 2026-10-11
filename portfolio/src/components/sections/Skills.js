@@ -7,11 +7,11 @@ import { skillGroups } from "@/data/skills";
 
 const card = "rounded-card border-[1.5px] border-border shadow-soft";
 
-// each group gets its own surface color and grid position
 const layout = {
-    frontend: "bg-surface lg:col-span-2 lg:row-span-2",
+    frontend: "bg-surface md:col-span-2 lg:col-span-3",
     backend: "bg-primary-soft",
     database: "bg-secondary-soft",
+    tools: "bg-surface-2 md:col-span-2 lg:col-span-1",
 };
 
 const gridVariants = {
@@ -50,7 +50,7 @@ export default function Skills() {
                     icon={FiCpu}
                     label="Skills"
                     title="Tools I work with"
-                    description="Frontend is my home base, backed by enough backend and database experience to ship complete products."
+                    description="Frontend is my home base, backed by professional-level backend and database skills to ship complete products."
                 />
 
                 <motion.div
@@ -58,7 +58,7 @@ export default function Skills() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.15 }}
-                    className="mt-10 grid gap-5 md:gap-6 lg:grid-cols-3"
+                    className="mt-10 grid gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
                 >
                     {skillGroups.map((group) => (
                         <motion.div

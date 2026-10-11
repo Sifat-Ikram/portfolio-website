@@ -15,7 +15,12 @@ import {
     SiZod,
     SiReactquery,
     SiHtml5,
+    SiGit,
+    SiGithub,
+    SiVercel,
 } from "react-icons/si";
+
+import { FiServer, FiLock, FiCpu } from "react-icons/fi";
 
 import { IoLogoCss3 } from "react-icons/io5";
 import { AiFillOpenAI } from "react-icons/ai";
@@ -40,7 +45,6 @@ export const skillGroups = [
             { name: "Redux", icon: SiRedux },
             { name: "Responsive Design", icon: FaReact },
             { name: "REST API Integration", icon: SiReactquery },
-            { name: "AI Agents", icon: AiFillOpenAI },
         ],
     },
 
@@ -51,6 +55,8 @@ export const skillGroups = [
         items: [
             { name: "Node.js", icon: FaNodeJs },
             { name: "Express.js", icon: SiExpress },
+            { name: "REST APIs", icon: FiServer },
+            { name: "JWT Auth", icon: FiLock },
             { name: "Zod", icon: SiZod },
         ],
     },
@@ -63,6 +69,18 @@ export const skillGroups = [
             { name: "PostgreSQL", icon: SiPostgresql },
             { name: "MongoDB", icon: SiMongodb },
             { name: "Firebase", icon: SiFirebase },
+        ],
+    },
+    {
+        id: "tools",
+        title: "AI & Tooling",
+        note: "AI integration, version control, and deployment.",
+        items: [
+            { name: "AI Agents", icon: AiFillOpenAI },
+            { name: "LLM API Integration", icon: FiCpu },
+            { name: "Git", icon: SiGit },
+            { name: "GitHub", icon: SiGithub },
+            { name: "Vercel Deployment", icon: SiVercel },
         ],
     },
 ];

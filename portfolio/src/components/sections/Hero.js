@@ -8,6 +8,7 @@ import { fireConfetti } from "@/lib/confetti";
 import { AiFillOpenAI } from "react-icons/ai";
 import { FaReact, FaNodeJs, FaLayerGroup } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript } from "react-icons/si";
+import Link from "next/link";
 
 const roles = [
     "Frontend Engineer",
@@ -162,21 +163,7 @@ export default function Hero() {
         >
             <div className="container-x grid items-center gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-7">
-                    <motion.span
-                        initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
-                        animate={{ opacity: 1, scale: 1, rotate: -3 }}
-                        transition={{ type: "spring", stiffness: 260, damping: 16 }}
-                        className="sticker"
-                        style={{ transform: undefined }}
-                    >
-                        <span className="relative flex size-2">
-                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
-                            <span className="relative inline-flex size-2 rounded-full bg-primary" />
-                        </span>
-                        Open to work
-                    </motion.span>
-
-                    <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-7xl 2xl:text-8xl">
+                    <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] sm:text-5xl lg:text-6xl 2xl:text-7xl">
                         <span className="block text-2xl font-semibold text-muted sm:text-3xl">
                             Hi, I&apos;m
                         </span>
@@ -215,19 +202,15 @@ export default function Hero() {
                     <RotatingRole />
 
                     <p className="mt-5 max-w-xl text-base text-muted sm:text-lg">
-                        I’m a Frontend Engineer with 2 years of professional experience building responsive web applications with React and Next.js. Beyond UI development, I build end-to-end features involving API integration, authentication, state management, and backend workflows, with a growing focus on AI-powered applications and agent workflows.
+                        Beyond UI development, I build end-to-end features involving API integration, authentication, state management, and backend workflows, focusing on AI-powered applications and agent workflows.
 
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
-                        <a href="#projects" className="btn btn-primary">
-                            View projects
-                            <FiArrowRight size={18} />
-                        </a>
-                        <a href={profile.resume} download className="btn btn-ghost">
+                        <Link href="#" className="btn btn-primary">
                             <FiDownload size={18} />
-                            Resume
-                        </a>
+                            Download Resume
+                        </Link>
                     </div>
 
                     <button

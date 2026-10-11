@@ -19,7 +19,6 @@ export default function Home() {
         <Education />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }

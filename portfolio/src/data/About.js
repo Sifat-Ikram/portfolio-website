@@ -1,4 +1,3 @@
-
 import { FiLayout, FiServer, FiLayers } from "react-icons/fi";
 
 // All About-section content lives here. Edit freely.
@@ -10,9 +9,12 @@ export const about = {
     title: "Engineer first, with an eye for design.",
 
     paragraphs: [
-        "I'm a Frontend Engineer with nearly 2 years of professional experience building responsive, user-focused web applications with React, Next.js, and TypeScript. Beyond crafting interfaces, I work on application features including REST API integration, authentication, state management, and backend-connected workflows. I focus on writing maintainable code, building reusable components, and creating smooth user experiences. I'm also exploring AI-powered applications and AI agent workflows, combining my frontend expertise with my growing interest in AI engineering."
+        "I'm a Frontend Engineer with 2 years of professional experience building responsive, user-focused web applications with React, Next.js, and TypeScript. My frontend work is backed by professional-level backend skills: I design REST APIs, implement JWT authentication, and model data in MongoDB and PostgreSQL, so I understand how an application works end to end.",
+        "I focus on writing maintainable code, building reusable components, and creating smooth user experiences. Because I know both sides of an API, I collaborate easily with backend teams and can take a feature from the UI all the way to the database when a project needs it.",
     ],
 
+    goal: "Looking to build my career in frontend engineering, bringing strong full-stack expertise to deliver complete, high-quality products.",
+    
     focus: [
         "React",
         "Next.js",
@@ -22,7 +24,7 @@ export const about = {
         "AI Agents"
     ],
 
-    // Three stat cards
+    // Stat cards
     stats: [
         {
             value: 2,
@@ -30,8 +32,9 @@ export const about = {
             label: "Years of professional experience",
         },
         {
-            value: "MERN",
-            label: "Full-stack capable",
+            // CHANGED: was "MERN"
+            value: "Full-Stack",
+            label: "Frontend, APIs and databases",
         },
     ],
 
@@ -54,7 +57,7 @@ export const about = {
     ],
 
     now: {
-        company: "Iinteca",
+        company: "Iinteca", // check the spelling: Iinteca or Linteca?
         role: "Frontend Engineer",
         since: "Oct 2025",
     },
