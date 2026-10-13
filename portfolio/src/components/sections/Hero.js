@@ -159,7 +159,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="glow-bg relative flex min-h-svh items-center overflow-hidden pb-16 pt-24"
+            className="glow-bg relative flex min-h-svh items-center overflow-hidden"
         >
             <div className="container-x grid items-center gap-12 lg:grid-cols-12">
                 <div className="lg:col-span-7">

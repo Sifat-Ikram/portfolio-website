@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,8 +7,6 @@ import { z } from "zod";
 import { motion } from "framer-motion";
 import {
     FiMail,
-    FiCopy,
-    FiCheck,
     FiSend,
     FiMapPin,
     FiPhone,
@@ -19,6 +16,8 @@ import { FaGithub, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { profile } from "@/data/profile";
 import { fireConfetti } from "@/lib/confetti";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const schema = z.object({
     name: z.string().min(2, "Please enter your name"),
@@ -47,8 +46,9 @@ const field =
 const errorText = "mt-1.5 text-sm text-red-600 dark:text-red-400";
 
 export default function Contact() {
-    const [status, setStatus] = useState("idle"); // idle | sending | success | error
+    const [status, setStatus] = useState("idle");
     const [copied, setCopied] = useState(false);
+    const formRef = useRef(null);
 
     const {
         register,
@@ -57,22 +57,33 @@ export default function Contact() {
         formState: { errors },
     } = useForm({ resolver: zodResolver(schema) });
 
+
     const onSubmit = async (values) => {
+        if (values.company) {
+            setStatus("success");
+            reset();
+            return;
+        }
+
         setStatus("sending");
+
         try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(values),
-            });
-            if (!res.ok) throw new Error("Request failed");
+            await emailjs.sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+            );
+
             setStatus("success");
             reset();
             fireConfetti();
-        } catch {
+        } catch (error) {
+            console.error("EmailJS error:", error);
             setStatus("error");
         }
     };
+
 
     const copyEmail = async () => {
         try {
@@ -181,6 +192,7 @@ export default function Contact() {
 
                     {/* Right: form */}
                     <motion.form
+                        ref={formRef}
                         onSubmit={handleSubmit(onSubmit)}
                         noValidate
                         initial={{ opacity: 0, y: 28 }}

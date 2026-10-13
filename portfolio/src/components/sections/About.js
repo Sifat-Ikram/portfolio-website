@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 // CHANGED: added FiTarget
-import { FiUser, FiMapPin, FiArrowUpRight, FiTarget } from "react-icons/fi";
+import { FiUser, FiMapPin, FiArrowUpRight } from "react-icons/fi";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CountUp from "@/components/ui/CountUp";
 import { about } from "@/data/About";
@@ -79,21 +79,6 @@ export default function About() {
                             ))}
                         </div>
 
-                        {/* NEW: career goal */}
-                        {about.goal && (
-                            <div className="mt-6 flex items-start gap-3 rounded-2xl bg-secondary-soft p-4">
-                                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-secondary text-on-primary">
-                                    <FiTarget size={18} />
-                                </span>
-                                <div>
-                                    <p className="text-xs font-semibold text-secondary">
-                                        Career goal
-                                    </p>
-                                    <p className="mt-0.5 font-medium text-text">{about.goal}</p>
-                                </div>
-                            </div>
-                        )}
-
                         <ul className="mt-6 flex flex-wrap gap-2">
                             {about.focus.map((item) => (
                                 <li
@@ -118,7 +103,7 @@ export default function About() {
                                 alt={`Portrait of ${profile.name}`}
                                 fill
                                 sizes="(min-width: 1024px) 30vw, 100vw"
-                                className="object-cover"
+                                className="object-contain object-center"
                                 onError={() => setImgError(true)}
                             />
                         ) : (
