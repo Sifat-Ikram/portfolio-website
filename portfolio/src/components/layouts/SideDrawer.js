@@ -232,7 +232,8 @@ export default function SideDrawer() {
                                 <motion.li variants={iconVariants} className="group relative">
                                     <a
                                         href={profile.resume}
-                                        download
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         aria-label="Download resume"
                                         className={`${iconBtn} bg-pop text-on-pop hover:brightness-95`}
                                     >
