@@ -155,6 +155,18 @@ function HeroVisual() {
     );
 }
 
+const handleDownloadResume = async (e) => {
+    e.preventDefault();
+
+    const resumeUrl = "https://drive.google.com/file/d/1Lv2ekTdeNtcafErZ3BEn4s_hyzYy0gI_/view?usp=sharing";
+
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.click();
+};
+
 export default function Hero() {
     return (
         <section
@@ -207,7 +219,7 @@ export default function Hero() {
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
-                        <Link href="#" className="btn btn-primary">
+                        <Link href="#" onClick={handleDownloadResume} className="btn btn-primary">
                             <FiDownload size={18} />
                             Download Resume
                         </Link>

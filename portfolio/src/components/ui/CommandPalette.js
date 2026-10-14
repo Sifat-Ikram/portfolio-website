@@ -120,10 +120,7 @@ export default function CommandPalette() {
                                         value="Download resume cv"
                                         onSelect={() =>
                                             run(() => {
-                                                const a = document.createElement("a");
-                                                a.href = profile.resume;
-                                                a.download = "";
-                                                a.click();
+                                                window.open(profile.resume, "_blank", "noopener,noreferrer");
                                             })
                                         }
                                         className={itemClass}
