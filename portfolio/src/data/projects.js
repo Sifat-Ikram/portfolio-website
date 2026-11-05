@@ -41,6 +41,29 @@ export const featuredProject = {
 
 export const projects = [
     {
+        title: "SaaS Service Management Platform",
+        description:
+            "A multi-module SaaS service management platform developed during my professional experience at Iinteca. I independently handled the frontend development from scratch, collaborating closely with a UI/UX designer to build a comprehensive dashboard and management portals.",
+
+        image: "https://i.postimg.cc/9M9MjsrC/Screenshot-2026-11-06-040337.png",
+
+        challenge: "Gadget buyers compare many products, so the catalog needed fast search, filtering and sorting.",
+        solution: "Implemented search, filtering and sorting with React Query for cached data fetching, plus protected checkout and order tracking behind JWT auth.",
+        result: "A complete shopping flow with order tracking, deployed and live.",
+
+        tech: [
+            "Next.js",
+            "React",
+            "JavaScript",
+            "Tailwind CSS",
+            "React Query",
+            "Framer Motion",
+        ],
+
+        live: "https://service-management-rho.vercel.app/dashboard/organization/clientDetails",
+        github: "Not publicly available",
+    },
+    {
         title: "ShopSphere",
         description:
             "A full-stack e-commerce platform with protected shopping, cart management, bKash and cash-on-delivery payments, user profiles, and an admin dashboard for products, users, and order fulfillment.",
@@ -65,33 +88,5 @@ export const projects = [
 
         live: "https://shop-sphere-client-zeta.vercel.app/",
         github: "https://github.com/Sifat-Ikram/shop-sphere-client",
-    },
-
-    {
-        title: "Spark Gear",
-        description:
-            "A full-stack gadgets e-commerce application with product search, filtering, sorting, detailed product pages, cart management, protected checkout, order tracking, and JWT-based authentication.",
-
-        image: "https://i.postimg.cc/3rgb12Mg/Screenshot-2026-10-13-181904.jpg",
-
-        challenge: "Gadget buyers compare many products, so the catalog needed fast search, filtering and sorting.",
-        solution: "Implemented search, filtering and sorting with React Query for cached data fetching, plus protected checkout and order tracking behind JWT auth.",
-        result: "A complete shopping flow with order tracking, deployed and live.",
-
-        tech: [
-            "Next.js",
-            "React",
-            "JavaScript",
-            "Tailwind CSS",
-            "React Query",
-            "Framer Motion",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
-            "JWT",
-        ],
-
-        live: "https://spark-gear-six.vercel.app/",
-        github: "https://github.com/Sifat-Ikram/spark-gear-ecommerce",
     },
 ];

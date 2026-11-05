@@ -9,8 +9,7 @@ export const about = {
     title: "Engineer first, with an eye for design.",
 
     paragraphs: [
-        "I'm a Frontend Engineer with 2 years of professional experience building responsive, user-focused web applications with React, Next.js, and TypeScript. My frontend work is backed by professional-level backend skills: I design REST APIs, implement JWT authentication, and model data in MongoDB and PostgreSQL, so I understand how an application works end to end.",
-        "I focus on writing maintainable code, building reusable components, and creating smooth user experiences. Because I know both sides of an API, I collaborate easily with backend teams and can take a feature from the UI all the way to the database when a project needs it.",
+       " I'm a Frontend Engineer with 2+ years of professional experience building responsive, user-focused web applications using React, Next.js, and TypeScript. I've independently developed frontend applications from scratch, including a multi-module SaaS platform, collaborating with designers to turn ideas into functional user interfaces. Beyond frontend development, I have hands-on experience with Node.js, Express.js, REST APIs, authentication, and databases like MongoDB and PostgreSQL. I focus on maintainable code, reusable components, frontend architecture, and creating smooth user experiences."
     ],
 
     goal: "Looking to build my career in frontend engineering, bringing strong full-stack expertise to deliver complete, high-quality products.",
@@ -32,7 +31,6 @@ export const about = {
             label: "Years of professional experience",
         },
         {
-            // CHANGED: was "MERN"
             value: "Full-Stack",
             label: "Frontend, APIs and databases",
         },

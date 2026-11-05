@@ -23,7 +23,7 @@ const schema = z.object({
     name: z.string().min(2, "Please enter your name"),
     email: z.string().email("Enter a valid email address"),
     message: z.string().min(10, "Message should be at least 10 characters"),
-    company: z.string().optional(), // honeypot, real people leave it empty
+    company: z.string().optional(),
 });
 
 const socials = [
@@ -81,17 +81,6 @@ export default function Contact() {
         } catch (error) {
             console.error("EmailJS error:", error);
             setStatus("error");
-        }
-    };
-
-
-    const copyEmail = async () => {
-        try {
-            await navigator.clipboard.writeText(profile.email);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-        } catch {
-            /* clipboard not available */
         }
     };
 
@@ -215,7 +204,7 @@ export default function Contact() {
                                     id="name"
                                     type="text"
                                     autoComplete="name"
-                                    placeholder="John Doe"
+                                    placeholder="Type Your Full Name"
                                     className={field}
                                     aria-invalid={!!errors.name}
                                     {...register("name")}
@@ -235,7 +224,7 @@ export default function Contact() {
                                     id="email"
                                     type="email"
                                     autoComplete="email"
-                                    placeholder="you@email.com"
+                                    placeholder="Your email address"
                                     className={field}
                                     aria-invalid={!!errors.email}
                                     {...register("email")}

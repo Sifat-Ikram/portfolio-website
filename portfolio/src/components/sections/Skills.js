@@ -8,10 +8,11 @@ import { skillGroups } from "@/data/skills";
 const card = "rounded-card border-[1.5px] border-border shadow-soft";
 
 const layout = {
-    frontend: "bg-surface md:col-span-2 lg:col-span-3",
+    frontend: "bg-surface md:col-span-2",
     backend: "bg-primary-soft",
-    database: "bg-secondary-soft",
-    tools: "bg-surface-2 md:col-span-2 lg:col-span-1",
+    database: "bg-surface",
+    ai: "bg-secondary-soft-2",
+    devops: "bg-surface-2",
 };
 
 const gridVariants = {
@@ -58,7 +59,7 @@ export default function Skills() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.15 }}
-                    className="mt-10 grid gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
+                    className="mt-10 grid gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-2"
                 >
                     {skillGroups.map((group) => (
                         <motion.div

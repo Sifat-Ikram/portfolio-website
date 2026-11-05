@@ -129,7 +129,12 @@ function Links({ project, className = "" }) {
                     <FiArrowUpRight size={16} />
                 </a>
             )}
-            {project.github && (
+            {project.github === "Not publicly available" ? (
+                <span className="inline-flex items-center gap-2 text-sm text-muted">
+                    <FaGithub size={16} />
+                    Code is not publicly available
+                </span>
+            ) : project.github ? (
                 <a
                     href={project.github}
                     target="_blank"
@@ -139,7 +144,7 @@ function Links({ project, className = "" }) {
                     <FaGithub size={16} />
                     Code
                 </a>
-            )}
+            ) : null}
         </div>
     );
 }

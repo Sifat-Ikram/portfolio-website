@@ -18,9 +18,11 @@ import {
     SiGit,
     SiGithub,
     SiVercel,
+    SiDocker,
+    SiGithubactions,
 } from "react-icons/si";
 
-import { FiServer, FiLock, FiCpu } from "react-icons/fi";
+import { FiServer, FiLock, FiCpu, FiGitMerge } from "react-icons/fi";
 
 import { IoLogoCss3 } from "react-icons/io5";
 import { AiFillOpenAI } from "react-icons/ai";
@@ -72,15 +74,26 @@ export const skillGroups = [
         ],
     },
     {
-        id: "tools",
-        title: "AI & Tooling",
-        note: "AI integration, version control, and deployment.",
+        id: "ai",
+        title: "AI & Integration",
+        note: "Integrating AI models and building AI-powered features.",
         items: [
             { name: "AI Agents", icon: AiFillOpenAI },
             { name: "LLM API Integration", icon: FiCpu },
+        ],
+    },
+
+    {
+        id: "devops",
+        title: "DevOps & Tools",
+        note: "Version control, containerization, CI/CD, and deployment.",
+        items: [
             { name: "Git", icon: SiGit },
             { name: "GitHub", icon: SiGithub },
-            { name: "Vercel Deployment", icon: SiVercel },
+            { name: "Docker", icon: SiDocker },
+            { name: "GitHub Actions", icon: SiGithubactions },
+            { name: "CI/CD", icon: FiGitMerge },
+            { name: "Vercel", icon: SiVercel },
         ],
     },
 ];

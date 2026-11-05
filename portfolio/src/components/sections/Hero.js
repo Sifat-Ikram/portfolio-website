@@ -2,12 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { FiArrowRight, FiDownload } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import { profile } from "@/data/profile";
 import { fireConfetti } from "@/lib/confetti";
 import { AiFillOpenAI } from "react-icons/ai";
 import { FaReact, FaNodeJs, FaLayerGroup } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
+import { IoLogoJavascript } from "react-icons/io";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { DiMongodb } from "react-icons/di";
+import { RiNextjsLine } from "react-icons/ri";
 import Link from "next/link";
 
 const roles = [
@@ -75,12 +79,14 @@ function HeroVisual() {
     };
 
     const chips = [
-        { label: "React", icon: FaReact, pos: "left-0 top-[10%]", delay: 0 },
-        { label: "Next.js", icon: SiNextdotjs, pos: "right-0 top-[20%]", delay: 0.6 },
-        { label: "TypeScript", icon: SiTypescript, pos: "left-0 top-[45%]", delay: 1.2 },
-        { label: "Node.js", icon: FaNodeJs, pos: "right-0 top-[55%]", delay: 1.8 },
-        { label: "AI Agents", icon: AiFillOpenAI, pos: "bottom-[14%] left-[3%]", delay: 2.4 },
-        { label: "Full-stack", icon: FaLayerGroup, pos: "bottom-[7%] right-[5%]", delay: 3.0 },
+        { label: "React", icon: FaReact, pos: "left-[6%] top-[14%]", delay: 0 },
+        { label: "JavaScript", icon: IoLogoJavascript, pos: "left-[40%] top-[0%]", delay: 0.6 },
+        { label: "Next.js", icon: RiNextjsLine, pos: "-right-2 top-[15%]", delay: 1.2 },
+        { label: "TypeScript", icon: TbBrandTypescript, pos: "left-0 top-[44%]", delay: 1.8 },
+        { label: "Node.js", icon: FaNodeJs, pos: "-right-13 top-[44%]", delay: 2.4 },
+        { label: "AI Agents", icon: AiFillOpenAI, pos: "left-[6%] bottom-[20%]", delay: 3.0 },
+        { label: "MongoDB", icon: DiMongodb, pos: "left-[39%] bottom-[0%]", delay: 3.6 },
+        { label: "PostgreSQL", icon: BiLogoPostgresql, pos: "-right-15 bottom-[20%]", delay: 4.2 },
     ];
 
     return (
@@ -114,10 +120,6 @@ function HeroVisual() {
                     </textPath>
                 </text>
             </motion.svg>
-
-            {/* decorative dots */}
-            <span className="absolute left-[42%] top-[1%] size-9 rounded-full bg-pop" />
-            <span className="absolute bottom-[3%] left-[40%] size-5 rounded-full bg-secondary" />
 
             {/* main circle */}
             <motion.button
@@ -154,18 +156,6 @@ function HeroVisual() {
         </div>
     );
 }
-
-const handleDownloadResume = async (e) => {
-    e.preventDefault();
-
-    const resumeUrl = "https://drive.google.com/file/d/1Lv2ekTdeNtcafErZ3BEn4s_hyzYy0gI_/view?usp=sharing";
-
-    const link = document.createElement("a");
-    link.href = resumeUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.click();
-};
 
 export default function Hero() {
     return (
@@ -214,15 +204,18 @@ export default function Hero() {
                     <RotatingRole />
 
                     <p className="mt-5 max-w-xl text-base text-muted sm:text-lg">
-                        Beyond UI development, I build end-to-end features involving API integration, authentication, state management, and backend workflows, focusing on AI-powered applications and agent workflows.
-
+                        I build modern, responsive web applications using React, Next.js, and TypeScript. I focus on creating scalable frontend experiences, reusable components, and intuitive user interfaces, with hands-on experience in backend development, API integration, and AI-powered features.
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
-                        <Link href="#" onClick={handleDownloadResume} className="btn btn-primary">
+                        <a
+                            href="/Md_Sifat_Ikram_Resume.pdf"
+                            download="Frontend Engineer - Md. Sifat Ikram.pdf"
+                            className="btn btn-primary"
+                        >
                             <FiDownload size={18} />
                             Download Resume
-                        </Link>
+                        </a>
                     </div>
 
                     <button

@@ -5,7 +5,6 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { FiMenu, FiX, FiDownload } from "react-icons/fi";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 import { sections, sectionIds } from "@/data/navigation";
-import { profile } from "@/data/profile";
 import useActiveSection from "@/hooks/useActiveSection";
 import useScrollTo from "@/hooks/useScrollTo";
 
@@ -231,10 +230,9 @@ export default function SideDrawer() {
                                 {/* resume */}
                                 <motion.li variants={iconVariants} className="group relative">
                                     <a
-                                        href={profile.resume}
-                                        target="_blank"
+                                        href="/Md_Sifat_Ikram_Resume.pdf"
+                                        download="Frontend Engineer - Md. Sifat Ikram.pdf"
                                         rel="noopener noreferrer"
-                                        aria-label="Download resume"
                                         className={`${iconBtn} bg-pop text-on-pop hover:brightness-95`}
                                     >
                                         <FiDownload size={20} />
