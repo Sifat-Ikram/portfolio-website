@@ -2,7 +2,7 @@ export const education = [
     {
         school: "Shahjalal University of Science and Technology",
         title: "B.Sc. in Physics",
-        period: "2015 – 2023",
+        period: "2015 – 2022",
         type: "degree",
     },
     {
