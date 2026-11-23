@@ -20,6 +20,9 @@ import {
     SiVercel,
     SiDocker,
     SiGithubactions,
+    SiNestjs,
+    SiPrisma,
+    SiOpenrouter,
 } from "react-icons/si";
 
 import { FiServer, FiLock, FiCpu, FiGitMerge } from "react-icons/fi";
@@ -56,6 +59,7 @@ export const skillGroups = [
         note: "Building APIs, authentication, and server-side functionality.",
         items: [
             { name: "Node.js", icon: FaNodeJs },
+            { name: "Nest.js", icon: SiNestjs },
             { name: "Express.js", icon: SiExpress },
             { name: "REST APIs", icon: FiServer },
             { name: "JWT Auth", icon: FiLock },
@@ -69,6 +73,7 @@ export const skillGroups = [
         note: "Working with databases and application data.",
         items: [
             { name: "PostgreSQL", icon: SiPostgresql },
+            { name: "Prisma", icon: SiPrisma },
             { name: "MongoDB", icon: SiMongodb },
             { name: "Firebase", icon: SiFirebase },
         ],
@@ -79,6 +84,7 @@ export const skillGroups = [
         note: "Integrating AI models and building AI-powered features.",
         items: [
             { name: "AI Agents", icon: AiFillOpenAI },
+            { name: "OpenRouter AI", icon: SiOpenrouter },
             { name: "LLM API Integration", icon: FiCpu },
         ],
     },

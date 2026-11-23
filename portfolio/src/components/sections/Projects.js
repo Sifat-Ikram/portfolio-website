@@ -56,8 +56,8 @@ function Tilt({ children, className = "" }) {
     );
 }
 
-/* Screenshot (links to the live site) with a gradient fallback */
-function Preview({ project, index = 0, className = "" }) {
+function Preview({ project, index = 0, className = "", fit }) {
+    const mode = fit ?? project.fit ?? "cover";
     const [broken, setBroken] = useState(!project.image);
 
     const inner = !broken ? (
@@ -66,7 +66,10 @@ function Preview({ project, index = 0, className = "" }) {
             alt={`${project.title} preview`}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover object-top transition-transform duration-500 group-hover/preview:scale-105"
+            className={`transition-transform duration-500 group-hover/preview:scale-105 ${mode === "contain"
+                    ? "object-contain object-center"
+                    : "object-cover object-top"
+                }`}
             onError={() => setBroken(true)}
         />
     ) : (
@@ -80,7 +83,7 @@ function Preview({ project, index = 0, className = "" }) {
         </div>
     );
 
-    const base = `group/preview relative block overflow-hidden ${className}`;
+    const base = `group/preview relative block overflow-hidden bg-surface-2 ${className}`;
 
     return project.live ? (
         <a
@@ -201,6 +204,7 @@ export default function Projects() {
                     <Preview
                         project={p}
                         index={0}
+                        fit="contain"
                         className="aspect-[16/10] border-b-[1.5px] border-border lg:aspect-auto lg:min-h-[28rem] lg:border-b-0 lg:border-r-[1.5px]"
                     />
 

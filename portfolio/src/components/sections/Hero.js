@@ -13,6 +13,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
 import { RiNextjsLine } from "react-icons/ri";
 import Link from "next/link";
+import { SiNestjs } from "react-icons/si";
 
 const roles = [
     "Frontend Engineer",
@@ -79,22 +80,25 @@ function HeroVisual() {
     };
 
     const chips = [
-        { label: "React", icon: FaReact, pos: "left-[6%] top-[14%]", delay: 0 },
-        { label: "JavaScript", icon: IoLogoJavascript, pos: "left-[40%] top-[0%]", delay: 0.6 },
-        { label: "Next.js", icon: RiNextjsLine, pos: "-right-2 top-[15%]", delay: 1.2 },
-        { label: "TypeScript", icon: TbBrandTypescript, pos: "left-0 top-[44%]", delay: 1.8 },
-        { label: "Node.js", icon: FaNodeJs, pos: "-right-13 top-[44%]", delay: 2.4 },
-        { label: "AI Agents", icon: AiFillOpenAI, pos: "left-[6%] bottom-[20%]", delay: 3.0 },
-        { label: "MongoDB", icon: DiMongodb, pos: "left-[39%] bottom-[0%]", delay: 3.6 },
-        { label: "PostgreSQL", icon: BiLogoPostgresql, pos: "-right-15 bottom-[20%]", delay: 4.2 },
+        { label: "JavaScript", icon: IoLogoJavascript },
+        { label: "TypeScript", icon: TbBrandTypescript },
+        { label: "React", icon: FaReact },
+        { label: "Next.js", icon: RiNextjsLine },
+        { label: "Node.js", icon: FaNodeJs },
+        { label: "Nest.js", icon: SiNestjs },
+        { label: "PostgreSQL", icon: BiLogoPostgresql },
+        { label: "MongoDB", icon: DiMongodb },
+        { label: "AI Agents", icon: AiFillOpenAI },
     ];
+
+    const RADIUS = 37;
 
     return (
         <div className="relative mx-auto aspect-square w-full max-w-[20rem] sm:max-w-md lg:max-w-none">
             {/* rotating text ring */}
             <motion.svg
                 viewBox="0 0 200 200"
-                className="absolute inset-0 size-full text-text"
+                className="absolute left-[4.9%] top-[4.9%] size-[90.2%] text-text"
                 animate={reduce ? undefined : { rotate: 360 }}
                 transition={{ duration: 26, ease: "linear", repeat: Infinity }}
                 aria-hidden="true"
@@ -128,7 +132,7 @@ function HeroVisual() {
                 aria-label="Decorative badge"
                 whileHover={{ scale: 1.04, rotate: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="absolute inset-[16%] grid place-items-center rounded-full bg-primary text-on-primary shadow-pop"
+                className="absolute inset-[20%] grid place-items-center rounded-full bg-primary text-on-primary shadow-pop"
             >
                 <span className="absolute inset-3 rounded-full border-2 border-dashed border-on-primary/30" />
                 <span className="font-display text-6xl font-bold sm:text-7xl 2xl:text-8xl">
@@ -136,23 +140,42 @@ function HeroVisual() {
                 </span>
             </motion.button>
 
-            {/* floating tech chips */}
-            {chips.map(({ label, icon: Icon, pos, delay }) => (
-                <motion.div
-                    key={label}
-                    animate={reduce ? undefined : { y: [0, -12, 0] }}
-                    transition={{
-                        duration: 4,
-                        ease: "easeInOut",
-                        repeat: Infinity,
-                        delay,
-                    }}
-                    className={`absolute ${pos} flex items-center gap-2 rounded-full border-[1.5px] border-border bg-surface px-3.5 py-2 text-sm font-semibold shadow-soft`}
-                >
-                    <Icon size={18} className="text-primary" />
-                    {label}
-                </motion.div>
-            ))}
+            {/* floating tech chips, evenly spaced on a circle */}
+            {chips.map(({ label, icon: Icon }, i) => {
+                const angle = ((-90 + (360 / chips.length) * i) * Math.PI) / 180;
+                const cos = Math.cos(angle);
+                const sin = Math.sin(angle);
+                const left = (50 + RADIUS * cos).toFixed(2);
+                const top = (50 + RADIUS * sin).toFixed(2);
+                const isLeft = cos < -0.1;
+
+                return (
+                    <div
+                        key={label}
+                        className="absolute"
+                        style={{
+                            left: `${left}%`,
+                            top: `${top}%`,
+                            transform: `translate(${(-50 + cos * 50).toFixed(2)}%, ${(-50 + sin * 50).toFixed(2)}%)`,
+                        }}
+                    >
+                        <motion.div
+                            animate={reduce ? undefined : { y: [0, -12, 0] }}
+                            transition={{
+                                duration: 4,
+                                ease: "easeInOut",
+                                repeat: Infinity,
+                                delay: i * 0.5,
+                            }}
+                            className={`flex items-center gap-2 whitespace-nowrap rounded-full border-[1.5px] border-border bg-surface px-3.5 py-2 text-sm font-semibold shadow-soft ${isLeft ? "flex-row-reverse" : ""
+                                }`}
+                        >
+                            <Icon size={18} className="text-primary" />
+                            {label}
+                        </motion.div>
+                    </div>
+                );
+            })}
         </div>
     );
 }

@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${jakarta.variable} ${inter.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <SmoothScroll>
             <CommandPalette />
