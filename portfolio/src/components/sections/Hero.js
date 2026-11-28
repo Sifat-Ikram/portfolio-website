@@ -232,7 +232,7 @@ export default function Hero() {
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
                         <a
-                            href="/Md_Sifat_Ikram_Resume.pdf"
+                            href="/CV of Md Sifat Ikram.pdf"
                             download="Frontend Engineer - Md. Sifat Ikram.pdf"
                             className="btn btn-primary"
                         >

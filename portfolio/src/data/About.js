@@ -3,7 +3,7 @@ import { FiLayout, FiServer, FiLayers } from "react-icons/fi";
 // All About-section content lives here. Edit freely.
 export const about = {
     // Put your photo at: public/images/profile.jpg
-    photo: "https://i.postimg.cc/sgScfrV5/MY-IMG-20220306-201333.jpg",
+    photo: "https://i.postimg.cc/QMFVBqWs/16640709-872230692916564-8044676510521940530-n.jpg",
     location: "Dhaka, Bangladesh",
 
     title: "Engineer first, with an eye for design.",

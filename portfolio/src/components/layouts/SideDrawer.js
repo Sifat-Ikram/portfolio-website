@@ -230,7 +230,7 @@ export default function SideDrawer() {
                                 {/* resume */}
                                 <motion.li variants={iconVariants} className="group relative">
                                     <a
-                                        href="/Md_Sifat_Ikram_Resume.pdf"
+                                        href="/CV of Md Sifat Ikram.pdf"
                                         download="Frontend Engineer - Md. Sifat Ikram.pdf"
                                         rel="noopener noreferrer"
                                         className={`${iconBtn} bg-pop text-on-pop hover:brightness-95`}
